@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { SearchLink } from './SearchLink';
 
 export const Navbar = () => {
   const { pathname } = useLocation();
@@ -25,14 +26,14 @@ export const Navbar = () => {
             Home
           </Link>
 
-          <Link
+          <SearchLink
             to="/people"
             className={`navbar-item ${
               isPeoplePage ? 'has-background-grey-lighter' : ''
             }`}
           >
             People
-          </Link>
+          </SearchLink>
         </div>
       </div>
     </nav>
